@@ -20,8 +20,16 @@ function updateUI() {
   cookieCount.textContent = Math.floor(count);
   cpsEl.textContent = `ต่อวินาที: ${cps}`;
 
-  // อัปเดตข้อความและสถานะปุ่ม Upgrade Clicker
+  //   if (count < clickerUpgradeCost) {
+  //     upgradeClickerBtn.classList.add("opacity-50", "cursor-not-allowed");
+  //   } else {
+  //     upgradeClickerBtn.classList.add("opacity-100", "cursor-pointer");
+  //   }
   if (upgradeClickerBtn) {
+    // อัปเดตข้อความและสถานะปุ่ม Upgrade Clicker
+    upgradeClickerBtn.textContent = `Upgrade clicker (+1) for ${clickerUpgradeCost} cookies`;
+    // แค่สั่ง true/false Tailwind จะสลับสไตล์ opacity และ cursor ตาม HTML ให้อัตโนมัติ
+    upgradeClickerBtn.disabled = count < clickerUpgradeCost;
     upgradeClickerBtn.textContent = `Upgrade clicker (+1) for ${clickerUpgradeCost} cookies`;
     upgradeClickerBtn.disabled = count < clickerUpgradeCost;
   }
@@ -29,6 +37,8 @@ function updateUI() {
   // อัปเดตข้อความและสถานะปุ่ม Auto Clicker
   if (autoClickerBtn) {
     autoClickerBtn.textContent = `Purchase auto clicker (+1/s) for ${autoClickerCost} cookies`;
+    autoClickerBtn.disabled = count < autoClickerCost;
+    autoClickerBtn.textContent = `Upgrade clicker (+1) for ${autoClickerCost} cookies`;
     autoClickerBtn.disabled = count < autoClickerCost;
   }
 }
