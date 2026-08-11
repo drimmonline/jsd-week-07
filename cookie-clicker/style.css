@@ -1,0 +1,22 @@
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(1.2);
+  }
+}
+
+.floating-number {
+  position: fixed; /* ให้อิงตำแหน่งตามหน้าจอ */
+  font-size: 3rem;
+  font-weight: bold;
+  color: #241e14; /* สีส้ม/ทอง */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  pointer-events: none; /* สำคัญ: เพื่อไม่ให้ตัวเลขบังการคลิกปุ่ม */
+  user-select: none;
+  animation: floatUp 0.8s ease-out forwards;
+  z-index: 9999;
+}

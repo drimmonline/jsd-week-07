@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CookieClikcer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold text-red-500 text-center mt-10 uppercase">
+      Welcome to cookie clicker
+    </h1>
+    <div class="bg-gray-300 max-w-2xl w-full m-auto rounded-md mt-10">
+      <div class="solid h-200 max-w-2xl m-auto p-2 shadow-md">
+        <h2 id="cookie-count" class="text-center text-3xl font-bold">0</h2>
+        <h2 class="text-center text-3xl font-bold">COOKIES</h2>
+        <p id="cps" class="text-center text-3xl font-bold">ต่อวินาที: 0</p>
+        <button id="cookie-btn" class="mx-auto block">
+          <img
+            src="./assets/cookie-image.png"
+            class="hover:scale-110 w-80 h-auto transition-transform"
+          />
+        </button>
+
+        <div class="flex gap-5 justify-center mt-10">
+          <button
+            type="button"
+            id="upgradeClicker"
+            class="rounded-xl p-2 bg-white shadow-lg hover:scale-110"
+          >
+            Upgrade clicker for 25 cookies
+          </button>
+          <button
+            type="button"
+            id="autoClikcer"
+            class="rounded-xl p-2 bg-white shadow-lg hover:scale-110"
+          >
+            Purchase auto clicker for 15 cookies
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
