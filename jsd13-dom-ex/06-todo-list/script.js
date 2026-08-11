@@ -69,16 +69,24 @@ function addNewTodo(text) {
   // เขียน HTML โครงสร้างทีเดียว
   li.innerHTML = `
     <span class="todo-text">${text}</span>
+    <span class="edit-btn">edit</span>
     <button class="delete-btn">x</button>
   `;
 
   // เลือก element ภายใน li ออกมาผูก event
   const spanText = li.querySelector(".todo-text");
   const deleteBtn = li.querySelector(".delete-btn");
-
+  const editBtn = li.querySelector(".edit-btn");
+  editBtn.className = editBtn;
   spanText.addEventListener("click", () => li.classList.toggle("completed"));
   deleteBtn.addEventListener("click", () => li.remove());
 
+  editBtn.addEventListener("click", function () {
+    const newValue = prompt("แก้ไขข้อความ:", spanText.textContent);
+    if (newValue !== null && newValue.trim() !== "") {
+      spanText.textContent = newValue.trim();
+    }
+  });
   todoList.appendChild(li);
 }
 // TODO 4: When the delete button inside an <li> is clicked, remove that <li>

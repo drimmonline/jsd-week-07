@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#pokemon-name {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#pokedek {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid none;
+  box-shadow: 2px 3px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+.img-src {
+  width: 200px;
+  height: auto;
+  margin: auto;
+}
+
+.list-stle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  gap: 3px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+}
+.delete-btn {
+  padding: 10px;
+  border: 1px solid black;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+}
+.delete-btn:hover {
+  scale: 110%;
+  background-color: rgb(240, 143, 143);
+  box-shadow: 2px 3px;
+}
+.edit-btn {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.edit-btn:hover {
+  scale: 110%;
+  background-color: rgb(128, 225, 186);
+  box-shadow: 2px 3px;
+}
+.pokemon-container {
+  margin-top: 10px;
+}
