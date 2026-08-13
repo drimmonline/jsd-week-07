@@ -20,11 +20,6 @@ function updateUI() {
   cookieCount.textContent = Math.floor(count);
   cpsEl.textContent = `ต่อวินาที: ${cps}`;
 
-  //   if (count < clickerUpgradeCost) {
-  //     upgradeClickerBtn.classList.add("opacity-50", "cursor-not-allowed");
-  //   } else {
-  //     upgradeClickerBtn.classList.add("opacity-100", "cursor-pointer");
-  //   }
   if (upgradeClickerBtn) {
     // อัปเดตข้อความและสถานะปุ่ม Upgrade Clicker
     upgradeClickerBtn.textContent = `Upgrade clicker (+1) for ${clickerUpgradeCost} cookies`;
